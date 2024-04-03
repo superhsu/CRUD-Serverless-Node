@@ -6,3 +6,7 @@ This workshop contains instructions on how to create a CRUD NodeJS application t
 
 <img width="1190" alt="flow" src="https://github.com/superhsu/CRUD-Serverless-Node/assets/31141265/e066a0d6-da65-441b-bbf9-089868f592f2">
 
+## Workshop Prerequisites
+
+- AWS sandbox account
+- 
