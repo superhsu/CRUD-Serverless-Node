@@ -1,4 +1,4 @@
-# NodeJS CRUD serverless workshop
+# CRUD serverless workshop
 
 This workshop contains instructions on how to create a CRUD NodeJS application that will function as a shopping list → you can add, remove or get products on the shopping list.
 
