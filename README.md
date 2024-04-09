@@ -63,9 +63,52 @@ Send API requests to invoke the Lambda function
 ```
 curl -X GET '<API DOMAIN/health>' 
 
-curl -X POST 
+curl -X POST '<API DOMAIN/product>' \
+  -d '{
+        "inventory": 2000,
+        "price": 80,
+        "color": "dark",
+        "productid": "10",
+        "productName": "serverless bits"
+      }'
 
 curl -X GET '<API DOMAIN/products>'
 
+```
+
+### Instrument the Lambda function using Datadog
+
+**This step requires the AWS CLI to be installed and configured on your machine/VM** 
+
+[Datadog AWS Lambda documentation](https://docs.datadoghq.com/serverless/aws_lambda/installation/)
+
+1. Install the Datadog CLI client 
 
 ```
+npm install -g @datadog/datadog-ci
+```
+
+2. Launch the Datadog CLI in the interactive mode to guide your first installation for a quick start
+
+```
+datadog-ci lambda instrument -i
+```
+
+3. Select the region where the Lambda function is deployed e.g. "us-west-1" 
+
+4. Select your Datadog instance e.g. "datadoghq.com"
+
+5. Enter your Datadog API key 
+
+6. Select the Lambda function you'd like to instrument 
+
+The Datadog CLI will attach the Datadog library and extension layers and set the required environment variables to the Lambda function. 
+
+### Invoke the Lambda functions to view the Lambda function metrics and traces in Datadog
+
+<img width="1483" alt="Screenshot 2024-04-08 at 10 14 55 PM" src="https://github.com/superhsu/CRUD-Serverless-Workshop/assets/31141265/3c535304-916b-47f5-90ea-fa5c22be8b23">
+<img width="1502" alt="Screenshot 2024-04-08 at 10 15 33 PM" src="https://github.com/superhsu/CRUD-Serverless-Workshop/assets/31141265/51b3e09d-588c-4cc4-af9f-2a5221fd9586">
+
+
+
+
