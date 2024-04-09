@@ -9,8 +9,8 @@ This workshop contains instructions on how to create a CRUD NodeJS application t
 ## Workshop Prerequisites
 
 - AWS account
-- AWS CLI configured 
-- Datadog API Key 
+- [AWS CLI configured](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html) 
+- [Datadog API Key](https://docs.datadoghq.com/account_management/api-app-keys/#add-an-api-key-or-client-token) 
 
 ## Getting Started 
 
